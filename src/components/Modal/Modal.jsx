@@ -37,7 +37,6 @@ class Modal extends Component {
   render() {
     const { title, onClose, currentImageUrl, currentImageDescription } =
       this.props;
-
     return createPortal(
       <div className={css.backdrop} onClick={this.handleClickBackdrop}>
         <div className={css.modal}>

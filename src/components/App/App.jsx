@@ -87,16 +87,16 @@ class App extends Component {
   toggleModal = () => {
     this.setState(({ showModal }) => ({ showModal: !showModal }));
   };
+  // openModal = (largeImageURL, tags) => {
+  //   this.setState({ largeImage: largeImageURL, tags });
+  // };
 
-  openModal = e => {
-    const currentImageUrl = e.target.dataset.large;
-    const currentImageDescription = e.target.alt;
-
-    if (e.target.nodeName === 'IMG') {
+  openModal = (largeImage, description) => {
+    if (largeImage.target.nodeName === 'IMG') {
       this.setState(({ showModal }) => ({
         showModal: !showModal,
-        currentImageUrl: currentImageUrl,
-        currentImageDescription: currentImageDescription,
+        currentImageUrl: largeImage,
+        currentImageDescription: description,
       }));
     }
   };
