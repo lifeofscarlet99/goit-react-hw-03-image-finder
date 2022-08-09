@@ -92,13 +92,11 @@ class App extends Component {
   // };
 
   openModal = (largeImage, description) => {
-    if (largeImage.target.nodeName === 'IMG') {
-      this.setState(({ showModal }) => ({
-        showModal: !showModal,
-        currentImageUrl: largeImage,
-        currentImageDescription: description,
-      }));
-    }
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+      currentImageUrl: largeImage,
+      currentImageDescription: description,
+    }));
   };
 
   render() {

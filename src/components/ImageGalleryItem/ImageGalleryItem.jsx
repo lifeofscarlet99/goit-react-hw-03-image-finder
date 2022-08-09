@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 import css from './ImageGalleryItem.module.css';
 
-const ImageGalleryItem = ({ description, smallImage, largeImage, onClick }) => {
+const ImageGalleryItem = ({
+  description,
+  smallImage,
+  largeImage,
+  openModal,
+}) => {
   return (
-    <li className={css.item} onClick={() => onClick(largeImage, description)}>
+    <li className={css.item} onClick={() => openModal(largeImage, description)}>
       <img src={smallImage} alt={description} data-large={largeImage} />
     </li>
   );
